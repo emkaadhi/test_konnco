@@ -47,8 +47,6 @@ class CheckoutController extends Controller
             ]);
         }
         
-        $items = PesananDetail::where('pesanan_id', $pesanan_ok->id)->get();
-
         \Midtrans\Config::$serverKey = config('midtrans.serverKey');
         \Midtrans\Config::$isProduction = false;
         \Midtrans\Config::$isSanitized = true;
@@ -70,7 +68,7 @@ class CheckoutController extends Controller
         $transaction->snap_token = $snapToken;
         $transaction->save();
 
-        return redirect()->route('payment', $transaction->id);
+        return redirect()->route('payment', $transaction->id)->with('success', 'Anda sudah melakukan transaksi, Silahkan lakukan pembayaran');
     }
 
     public function payment(Transaction $transaction)

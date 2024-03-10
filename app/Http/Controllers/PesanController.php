@@ -66,6 +66,6 @@ class PesanController extends Controller
         $pesanan->jumlah_harga = $pesanan->jumlah_harga + ($request->jumlah_pesan * $barang->harga);
         $pesanan->update();
 
-        return redirect('/home')->with('success', 'Pesanan Berhasil');
+        return redirect('/home')->with('success', 'Barang sukses masuk keranjang , Silakan cek keranjang belanja anda !');
     }
 }

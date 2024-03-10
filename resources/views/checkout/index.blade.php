@@ -59,8 +59,8 @@
                                         </tr>
                                     @endforeach
                                     <tr>
-                                        <td colspan="5" ><strong>Total Harga :</strong></td>
-                                        <td ><strong>Rp. {{ number_format($pesanan->jumlah_harga) }}</strong>
+                                        <td colspan="5"><strong>Total Harga :</strong></td>
+                                        <td><strong>Rp. {{ number_format($pesanan->jumlah_harga) }}</strong>
                                         </td>
                                         <td>
                                             <a href="{{ url('konfirmasi') }}" class="btn btn-success"
@@ -75,7 +75,7 @@
                             <div class="card">
                                 <div
                                     class="card-body text-center d-flex flex-column justify-content-center align-items-center">
-                                   <h5>Belum ada data</h5>
+                                    <h5>Belum ada data</h5>
                                 </div>
                             </div>
                         @endif

@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container">
+        @if (session('success'))
+            <div class="alert alert-success mb-3" role="alert">{{ session('success') }}</div>
+        @endif
         <div class="row">
             <div class="col-md-12">
                 <nav aria-label="breadcrumb">
@@ -16,7 +19,8 @@
                     <div class="card p-5">
                         <div>
                             <h4 class="heading">Proses Pembayaran</h4>
-                            <p class="text">Anda dapat memilih metode pembayaran yang sesuai dengan anda , proses masa berlaku
+                            <p class="text">Anda dapat memilih metode pembayaran yang sesuai dengan anda , proses masa
+                                berlaku
                                 pembayaran adalah 1 X 24 Jam</p>
                         </div>
                         <div class="pricing p-3 rounded mt-4 d-flex justify-content-between">
